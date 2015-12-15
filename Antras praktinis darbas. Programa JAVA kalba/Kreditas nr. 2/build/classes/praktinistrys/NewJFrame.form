@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+
+<Form version="1.3" maxVersion="1.9" type="org.netbeans.modules.form.forminfo.JFrameFormInfo">
+  <Properties>
+    <Property name="defaultCloseOperation" type="int" value="3"/>
+  </Properties>
+  <SyntheticProperties>
+    <SyntheticProperty name="formSizePolicy" type="int" value="1"/>
+    <SyntheticProperty name="generateCenter" type="boolean" value="false"/>
+  </SyntheticProperties>
+  <AuxValues>
+    <AuxValue name="FormSettings_autoResourcing" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_autoSetComponentName" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_generateFQN" type="java.lang.Boolean" value="true"/>
+    <AuxValue name="FormSettings_generateMnemonicsCode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_i18nAutoMode" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_layoutCodeTarget" type="java.lang.Integer" value="1"/>
+    <AuxValue name="FormSettings_listenerGenerationStyle" type="java.lang.Integer" value="0"/>
+    <AuxValue name="FormSettings_variablesLocal" type="java.lang.Boolean" value="false"/>
+    <AuxValue name="FormSettings_variablesModifier" type="java.lang.Integer" value="2"/>
+  </AuxValues>
+
+  <Layout>
+    <DimensionLayout dim="0">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" alignment="1" attributes="0">
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
+                      <Component id="bustoKreditasButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
+                      <Component id="vartojimoKreditasButton" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="21" max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="seimosPajamosAtskaiciusMokesciusLabel" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                              <Component id="seimosPajamosAtskaiciusMokesciusTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                              <Component id="seimosPajamosAtskaiciusMokesciusIspejimas" max="32767" attributes="0"/>
+                          </Group>
+                          <Group type="102" attributes="0">
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Group type="103" groupAlignment="1" max="-2" attributes="0">
+                                          <Group type="102" attributes="0">
+                                              <Component id="vaikuSkaiciusSeimojeLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="vaikuSkaiciusSeimojeTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                                              <EmptySpace max="-2" attributes="0"/>
+                                              <Component id="vaikuSkaiciusSeimojeApibrezimas" max="32767" attributes="0"/>
+                                          </Group>
+                                          <Group type="102" alignment="0" attributes="0">
+                                              <Component id="seimosFinansiaiIsipareigojimaiLabel" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                              <Component id="seimosFinansiniaiIsipareigojimaiTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                                          </Group>
+                                      </Group>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="seimosFinansiniaiIsipareigojimaiIspejimas" min="-2" pref="115" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" attributes="0">
+                                      <Component id="laikotarpisLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Component id="laikotarpisTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="laikotarpisIspejimas" min="-2" pref="134" max="-2" attributes="0"/>
+                                  </Group>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="paskolosSumaLabel" min="-2" max="-2" attributes="0"/>
+                                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                                      <Component id="paskolosSumaTextField" min="-2" pref="200" max="-2" attributes="0"/>
+                                      <EmptySpace max="-2" attributes="0"/>
+                                      <Component id="paskolosSumaIspejimas" min="-2" pref="215" max="-2" attributes="0"/>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                          </Group>
+                      </Group>
+                  </Group>
+                  <Group type="102" alignment="0" attributes="0">
+                      <EmptySpace min="-2" pref="98" max="-2" attributes="0"/>
+                      <Component id="klaidaTextField" min="-2" pref="408" max="-2" attributes="0"/>
+                      <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
+                  </Group>
+              </Group>
+              <EmptySpace min="-2" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace pref="119" max="32767" attributes="0"/>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Component id="kreditoMenesineImokaLabel" min="-2" max="-2" attributes="0"/>
+                      <EmptySpace max="-2" attributes="0"/>
+                  </Group>
+                  <Group type="103" groupAlignment="0" attributes="0">
+                      <Group type="103" alignment="1" groupAlignment="1" attributes="0">
+                          <Group type="102" attributes="0">
+                              <Component id="galimybeGrazintiKreditaNustatymui" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <Component id="sutartiesSudarymoMokescioDydis" min="-2" max="-2" attributes="0"/>
+                              <EmptySpace max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <Group type="102" alignment="1" attributes="0">
+                          <Component id="bendriosGrazintinosSumosApskaiciavimasLabel" min="-2" pref="201" max="-2" attributes="0"/>
+                          <EmptySpace max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+              </Group>
+              <Group type="103" groupAlignment="0" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="sutartiesSudarymoMokescioDydisTextField" pref="136" max="32767" attributes="0"/>
+                          <Component id="bendrosGrazintinosSUmosApskaiciavimasTextField" max="32767" attributes="0"/>
+                          <Component id="kreditoMenesineImokaTextField" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" attributes="0">
+                          <Component id="jLabel1" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel2" min="-2" max="-2" attributes="0"/>
+                          <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="galimybeGrazintiKreditaNustatymuiTextField" min="-2" pref="288" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
+          </Group>
+          <Group type="102" alignment="1" attributes="0">
+              <EmptySpace min="-2" pref="56" max="-2" attributes="0"/>
+              <Component id="atsakymasButton" min="-2" pref="146" max="-2" attributes="0"/>
+              <EmptySpace max="32767" attributes="0"/>
+              <Component id="atsakymas2Button" min="-2" pref="158" max="-2" attributes="0"/>
+              <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+    <DimensionLayout dim="1">
+      <Group type="103" groupAlignment="0" attributes="0">
+          <Group type="102" attributes="0">
+              <EmptySpace min="-2" pref="45" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bustoKreditasButton" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="vartojimoKreditasButton" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="1" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="vaikuSkaiciusSeimojeTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="vaikuSkaiciusSeimojeLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                          <Component id="vaikuSkaiciusSeimojeApibrezimas" max="32767" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                          <Component id="seimosPajamosAtskaiciusMokesciusIspejimas" max="32767" attributes="0"/>
+                          <Group type="103" groupAlignment="3" attributes="0">
+                              <Component id="seimosPajamosAtskaiciusMokesciusLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                              <Component id="seimosPajamosAtskaiciusMokesciusTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          </Group>
+                      </Group>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="seimosFinansiaiIsipareigojimaiLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="seimosFinansiniaiIsipareigojimaiTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="seimosFinansiniaiIsipareigojimaiIspejimas" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace type="unrelated" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="paskolosSumaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="paskolosSumaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                  </Group>
+                  <Component id="paskolosSumaIspejimas" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="laikotarpisLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="laikotarpisTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="laikotarpisIspejimas" alignment="3" min="-2" pref="20" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="atsakymasButton" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+                  <Component id="atsakymas2Button" alignment="3" min="-2" pref="35" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="unrelated" max="-2" attributes="0"/>
+              <Component id="klaidaTextField" pref="31" max="32767" attributes="0"/>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="kreditoMenesineImokaLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="kreditoMenesineImokaTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel1" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="bendriosGrazintinosSumosApskaiciavimasLabel" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="bendrosGrazintinosSUmosApskaiciavimasTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel2" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="sutartiesSudarymoMokescioDydis" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="sutartiesSudarymoMokescioDydisTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="jLabel3" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace type="separate" max="-2" attributes="0"/>
+              <Group type="103" groupAlignment="3" attributes="0">
+                  <Component id="galimybeGrazintiKreditaNustatymuiTextField" alignment="3" min="-2" max="-2" attributes="0"/>
+                  <Component id="galimybeGrazintiKreditaNustatymui" alignment="3" min="-2" max="-2" attributes="0"/>
+              </Group>
+              <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
+          </Group>
+      </Group>
+    </DimensionLayout>
+  </Layout>
+  <SubComponents>
+    <Component class="javax.swing.JButton" name="bustoKreditasButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Busto kreditas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="bustoKreditasButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="vartojimoKreditasButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vartojimo kreditas"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="vartojimoKreditasButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="vaikuSkaiciusSeimojeTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="seimosPajamosAtskaiciusMokesciusLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Seimos pajamos atskaicius mokescius(men)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="seimosPajamosAtskaiciusMokesciusTextField">
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="seimosPajamosAtskaiciusMokesciusTextFieldActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JLabel" name="seimosFinansiaiIsipareigojimaiLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Seimos finansiniai isipareigojimai(isiskolinimai)(men)"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="seimosFinansiniaiIsipareigojimaiTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="paskolosSumaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Paskolos suma"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="paskolosSumaTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="laikotarpisLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Laikotarpis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="laikotarpisTextField">
+    </Component>
+    <Component class="javax.swing.JLabel" name="kreditoMenesineImokaLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Kredito menesine imoka"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="kreditoMenesineImokaTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="bendriosGrazintinosSumosApskaiciavimasLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Bendros grazintinos sumos apskaic"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="bendrosGrazintinosSUmosApskaiciavimasTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="sutartiesSudarymoMokescioDydis">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Sutarties sudarymo mokescio dydis"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="sutartiesSudarymoMokescioDydisTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="galimybeGrazintiKreditaNustatymui">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Galimybe grazinti kredita nustatymas"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JTextField" name="galimybeGrazintiKreditaNustatymuiTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JButton" name="atsakymasButton">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Skaiciuoti"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atsakymasButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JButton" name="atsakymas2Button">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Skaiciuoti"/>
+      </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="atsakymas2ButtonActionPerformed"/>
+      </Events>
+    </Component>
+    <Component class="javax.swing.JTextField" name="klaidaTextField">
+      <Properties>
+        <Property name="editable" type="boolean" value="false"/>
+        <Property name="disabledTextColor" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
+          <Color blue="33" green="33" red="ff" type="rgb"/>
+        </Property>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="vaikuSkaiciusSeimojeLabel">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="Vaiku skaicius seimoje"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="vaikuSkaiciusSeimojeApibrezimas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="seimosPajamosAtskaiciusMokesciusIspejimas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="seimosFinansiniaiIsipareigojimaiIspejimas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="laikotarpisIspejimas">
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel1">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x20ac;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel2">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x20ac;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="jLabel3">
+      <Properties>
+        <Property name="text" type="java.lang.String" value="&#x20ac;"/>
+      </Properties>
+    </Component>
+    <Component class="javax.swing.JLabel" name="paskolosSumaIspejimas">
+    </Component>
+  </SubComponents>
+</Form>
