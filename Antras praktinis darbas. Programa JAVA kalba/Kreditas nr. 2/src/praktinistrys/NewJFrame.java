@@ -314,21 +314,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         onVisibleAtsakymai();
 
-        /* double paskolosSuma;
-         double sutartiesSudarymoMokestisAtsakymas;
-         double atsakymas1 = 0;
-         double atsakymas2 = 0;
-        
-         double paskolosSuma2;
-         double laikotarpis;
-         double bendrosGrazintinosSumosApskaiciavimasAtsakymas;
-        
-         double kreditoMenesineImokaApskaiciavimas;
-        
-         double realiosMenesinesPajamos;
-         double seimosPajamosAtskaiciusMokescius;
-         double seimosFinansiniaiIsipareigojimai;
-         double vaikuSkaiciusSeimoje;*/
         Kreditas kreditas = new Kreditas();
 
         kreditas.setPaskolosSuma(Integer.parseInt(paskolosSumaTextField.getText()));
@@ -338,7 +323,7 @@ public class NewJFrame extends javax.swing.JFrame {
         kreditas.setSeimosFinansiniaiIsipareigojimai(Integer.parseInt(seimosFinansiniaiIsipareigojimaiTextField.getText()));
         kreditas.setVaikuSkaiciusSeimoje(Integer.parseInt(vaikuSkaiciusSeimojeTextField.getText()));
 
-        if (vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40) {
+        if (kreditas.patikrink_ivestus_duomenys_busto()) {
 
             // SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
             sutartiesSudarymoMokestisAtsakymas = paskolosSuma * 0.13 / 100;
@@ -461,30 +446,6 @@ public class NewJFrame extends javax.swing.JFrame {
 
         klaidaTextField.setVisible(false);
 
-        /*    double paskolosSuma;
-         double sutartiesSudarymoMokestisAtsakymas;
-         double atsakymas1 = 0;
-         double atsakymas2 = 0;
-        
-         double paskolosSuma2;
-         double laikotarpis;
-         double bendrosGrazintinosSumosApskaiciavimasAtsakymas;
-        
-         double kreditoMenesineImokaApskaiciavimas;
-        
-         double realiosMenesinesPajamos;
-         double seimosPajamosAtskaiciusMokescius;
-         double seimosFinansiniaiIsipareigojimai;
-         double vaikuSkaiciusSeimoje;
-        
-         paskolosSuma = Integer.parseInt(paskolosSumaTextField.getText());
-        
-         paskolosSuma2 = Integer.parseInt(paskolosSumaTextField.getText());
-         laikotarpis = Integer.parseInt(laikotarpisTextField.getText());
-        
-         seimosPajamosAtskaiciusMokescius = Integer.parseInt(seimosPajamosAtskaiciusMokesciusTextField.getText());
-         seimosFinansiniaiIsipareigojimai = Integer.parseInt(seimosFinansiniaiIsipareigojimaiTextField.getText());
-         vaikuSkaiciusSeimoje = Integer.parseInt(vaikuSkaiciusSeimojeTextField.getText());*/
         Kreditas kreditas = new Kreditas();
 
         kreditas.setPaskolosSuma(Integer.parseInt(paskolosSumaTextField.getText()));
@@ -494,7 +455,12 @@ public class NewJFrame extends javax.swing.JFrame {
         kreditas.setSeimosFinansiniaiIsipareigojimai(Integer.parseInt(seimosFinansiniaiIsipareigojimaiTextField.getText()));
         kreditas.setVaikuSkaiciusSeimoje(Integer.parseInt(vaikuSkaiciusSeimojeTextField.getText()));
 
-        if (vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0 && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5) {
+        /**
+         *
+         * CONSOLIDATE CONDITIONAL EXPRESSION
+         *
+         */
+        if (kreditas.patikrink_ivestus_duomenys_vartojimo()) {
 
             // SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
             sutartiesSudarymoMokestisAtsakymas = paskolosSuma * 1 / 100;

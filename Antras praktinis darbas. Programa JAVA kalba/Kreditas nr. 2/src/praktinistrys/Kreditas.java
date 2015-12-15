@@ -122,8 +122,22 @@ public class Kreditas {
     public void setVaikuSkaiciusSeimoje(double vaikuSkaiciusSeimoje) {
         this.vaikuSkaiciusSeimoje = vaikuSkaiciusSeimoje;
     }
-    
 
- 
+    /**
+     *
+     * CONSOLIDATE CONDITIONAL EXPRESSION
+     *
+     */
+    public boolean patikrink_ivestus_duomenys_vartojimo() {
+        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 && seimosPajamosAtskaiciusMokescius < 10000 && seimosFinansiniaiIsipareigojimai > 0 && seimosFinansiniaiIsipareigojimai < 5000 && paskolosSuma2 > 300 && paskolosSuma2 < 26000 && laikotarpis <= 5;
+    }
 
+    public boolean patikrink_ivestus_duomenys_busto() {
+        return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
+    }
+    /**
+     *
+     * END OF CONSOLIDATE CONDITIONAL EXPRESSION
+     *
+     */
 }
