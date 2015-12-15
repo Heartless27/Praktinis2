@@ -323,40 +323,45 @@ public class NewJFrame extends javax.swing.JFrame {
         kreditas.setSeimosFinansiniaiIsipareigojimai(Integer.parseInt(seimosFinansiniaiIsipareigojimaiTextField.getText()));
         kreditas.setVaikuSkaiciusSeimoje(Integer.parseInt(vaikuSkaiciusSeimojeTextField.getText()));
 
+        /**
+         *
+         * CONSOLIDATE CONDITIONAL EXPRESSION
+         *
+         */
         if (kreditas.patikrink_ivestus_duomenys_busto()) {
 
             // SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
-            sutartiesSudarymoMokestisAtsakymas = paskolosSuma * 0.13 / 100;
+            kreditas.setSutartiesSudarymoMokestisAtsakymas(kreditas.getPaskolosSuma() * 0.13 / 100);
 
-            if (sutartiesSudarymoMokestisAtsakymas < 144.81) {
-                atsakymas1 = 144.81;
+            if (kreditas.tikrink_sutartiesSudarymoMokestisAtsakymas(144.81)) {      // DECOMPOSE CONDITIONAL
+                kreditas.setAtsakymas1(144.81);
 
-                sutartiesSudarymoMokescioDydisTextField.setText(atsakymas1 + "");
+                sutartiesSudarymoMokescioDydisTextField.setText(kreditas.getAtsakymas1() + "");
 
             } else {
-                atsakymas2 = sutartiesSudarymoMokestisAtsakymas;
+                kreditas.setAtsakymas2(kreditas.getSutartiesSudarymoMokestisAtsakymas());
 
-                sutartiesSudarymoMokescioDydisTextField.setText(atsakymas2 + "");
+                sutartiesSudarymoMokescioDydisTextField.setText(kreditas.getAtsakymas2() + "");
             }
 
             // PABAIGA!!!!!!!!!!    SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
             //     BENDROS GRAZINTINOS SUMOS APSKAICIAVIMAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
-            bendrosGrazintinosSumosApskaiciavimasAtsakymas = paskolosSuma2 + (paskolosSuma2 * 2 / 100 * laikotarpis);
+            kreditas.setBendrosGrazintinosSumosApskaiciavimasAtsakymas(kreditas.getPaskolosSuma2() + (kreditas.getPaskolosSuma2() * 2 / 100 * kreditas.getLaikotarpis()));
             // SVARBU!!!!!!!! 2 siaip pasirinkau, nes nezinau palukanu normu;
-            if (laikotarpis > 40) {
+            if (kreditas.tikrink_laikotarpi(40)) {   // DECOMPOSE CONDITIONAL
                 // NEGALIMAAAAA
                 bendrosGrazintinosSUmosApskaiciavimasTextField.setText("Nesuteikiama paskola");
             } else {
 
                 // PABAIGA!!!!!!!! BENDROS GRAZINTINOS SUMOS APSKAICIAVIMAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\    
                 // KREDITO MENESINES IMOKOS APSKAICIAVIMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\              
-                kreditoMenesineImokaApskaiciavimas = bendrosGrazintinosSumosApskaiciavimasAtsakymas / laikotarpis / 12;
+                kreditas.setKreditoMenesineImokaApskaiciavimas(kreditas.getBendrosGrazintinosSumosApskaiciavimasAtsakymas() / kreditas.getLaikotarpis() / 12);
 
                 //  PABAIGA!!!!!!!!!!!!!      KREDITO MENESINES IMOKOS APSKAICIAVIMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\           
                 //GALIMYBE GRAZINTI KREDITA NUSTATYMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\                              
-                realiosMenesinesPajamos = seimosPajamosAtskaiciusMokescius - seimosFinansiniaiIsipareigojimai - (vaikuSkaiciusSeimoje * 200);
+                kreditas.setRealiosMenesinesPajamos(kreditas.getSeimosPajamosAtskaiciusMokescius() - kreditas.getSeimosFinansiniaiIsipareigojimai() - (kreditas.getVaikuSkaiciusSeimoje() * 200));
 
-                if (kreditoMenesineImokaApskaiciavimas >= realiosMenesinesPajamos / 100 * 40) {
+                if (kreditas.tikrink_ar_nesuteikiama_paskola()) {       // DECOMPOSE CONDITIONAL
                     galimybeGrazintiKreditaNustatymuiTextField.setText("Bankas nesuteikia kredito");
                     kreditoMenesineImokaTextField.setText("");
                     bendrosGrazintinosSUmosApskaiciavimasTextField.setText("");
@@ -365,8 +370,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 } else {
 
                     galimybeGrazintiKreditaNustatymuiTextField.setText("Bankas suteikia kredita");
-                    kreditoMenesineImokaTextField.setText(kreditoMenesineImokaApskaiciavimas + "");
-                    bendrosGrazintinosSUmosApskaiciavimasTextField.setText(bendrosGrazintinosSumosApskaiciavimasAtsakymas + "");
+                    kreditoMenesineImokaTextField.setText(kreditas.getKreditoMenesineImokaApskaiciavimas() + "");
+                    bendrosGrazintinosSUmosApskaiciavimasTextField.setText(kreditas.getBendrosGrazintinosSumosApskaiciavimasAtsakymas() + "");
                 }
 
                 // PABAIGA!!!!!!!!!!!!!!  GALIMYBE GRAZINTI KREDITA NUSTATYMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\                        
@@ -463,34 +468,33 @@ public class NewJFrame extends javax.swing.JFrame {
         if (kreditas.patikrink_ivestus_duomenys_vartojimo()) {
 
             // SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
-            sutartiesSudarymoMokestisAtsakymas = paskolosSuma * 1 / 100;
+            kreditas.setSutartiesSudarymoMokestisAtsakymas(kreditas.getPaskolosSuma() * 1 / 100);
 
-            if (sutartiesSudarymoMokestisAtsakymas < 28.96) {
-                atsakymas1 = 28.96;
-                sutartiesSudarymoMokescioDydisTextField.setText(atsakymas1 + "");
+            if (kreditas.tikrink_sutartiesSudarymoMokestisAtsakymas(28.96)) {   // DECOMPOSE CONDITIONAL
+                kreditas.setAtsakymas1(28.96);
+                sutartiesSudarymoMokescioDydisTextField.setText(kreditas.getAtsakymas1() + "");
             } else {
-                atsakymas2 = sutartiesSudarymoMokestisAtsakymas;
-                sutartiesSudarymoMokescioDydisTextField.setText(atsakymas2 + "");
+                kreditas.setAtsakymas2(kreditas.getSutartiesSudarymoMokestisAtsakymas());
+                sutartiesSudarymoMokescioDydisTextField.setText(kreditas.getAtsakymas2() + "");
             }
 
             // PABAIGA!!!!!!!!!!    SUTARTIES SUDARYMO MOKESTIS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
             // BENDROS GRAZINTINOS SUMOS APSKAICIAVIMAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\
-            bendrosGrazintinosSumosApskaiciavimasAtsakymas = paskolosSuma2 + (paskolosSuma2 * 2 / 100 * laikotarpis);
+            kreditas.setBendrosGrazintinosSumosApskaiciavimasAtsakymas(kreditas.getPaskolosSuma2() + (kreditas.getPaskolosSuma2() * 2 / 100 * kreditas.getLaikotarpis()));
             // SVARBU!!!!!!!! 2 siaip pasirinkau, nes nezinau palukanu normu;
-            if (laikotarpis > 5) {
+            if (kreditas.tikrink_laikotarpi(5)) {       // DECOMPOSE CONDITIONAL
                 // NEGALIMAAAAA
                 bendrosGrazintinosSUmosApskaiciavimasTextField.setText("Nesuteikiama paskola");
             } else {
 
                 // PABAIGA!!!!!!!! BENDROS GRAZINTINOS SUMOS APSKAICIAVIMAS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\    
                 // KREDITO MENESINES IMOKOS APSKAICIAVIMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\              
-                kreditoMenesineImokaApskaiciavimas = bendrosGrazintinosSumosApskaiciavimasAtsakymas / laikotarpis / 12;
-
+                kreditas.setKreditoMenesineImokaApskaiciavimas(kreditas.getBendrosGrazintinosSumosApskaiciavimasAtsakymas() / kreditas.getLaikotarpis() / 12);
                 //  PABAIGA!!!!!!!!!!!!!      KREDITO MENESINES IMOKOS APSKAICIAVIMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\\     
-                //GALIMYBE GRAZINTI KREDITA NUSTATYMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\                              
-                realiosMenesinesPajamos = seimosPajamosAtskaiciusMokescius - seimosFinansiniaiIsipareigojimai - (vaikuSkaiciusSeimoje * 200);
+                //GALIMYBE GRAZINTI KREDITA NUSTATYMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\     
+                kreditas.setRealiosMenesinesPajamos(kreditas.getSeimosPajamosAtskaiciusMokescius() - kreditas.getSeimosFinansiniaiIsipareigojimai() - (kreditas.getVaikuSkaiciusSeimoje() * 200));
 
-                if (kreditoMenesineImokaApskaiciavimas >= realiosMenesinesPajamos / 100 * 40) {
+                if (kreditas.tikrink_ar_nesuteikiama_paskola()) {       // DECOMPOSE CONDITIONAL
                     galimybeGrazintiKreditaNustatymuiTextField.setText("Bankas nesuteikia kredito");
                     kreditoMenesineImokaTextField.setText("");
                     bendrosGrazintinosSUmosApskaiciavimasTextField.setText("");
@@ -499,8 +503,8 @@ public class NewJFrame extends javax.swing.JFrame {
                 } else {
 
                     galimybeGrazintiKreditaNustatymuiTextField.setText("Bankas suteikia kredita");
-                    kreditoMenesineImokaTextField.setText(kreditoMenesineImokaApskaiciavimas + "");
-                    bendrosGrazintinosSUmosApskaiciavimasTextField.setText(bendrosGrazintinosSumosApskaiciavimasAtsakymas + "");
+                    kreditoMenesineImokaTextField.setText(kreditas.getKreditoMenesineImokaApskaiciavimas() + "");
+                    bendrosGrazintinosSUmosApskaiciavimasTextField.setText(kreditas.getBendrosGrazintinosSumosApskaiciavimasAtsakymas() + "");
                 }
 
                 // PABAIGA!!!!!!!!!!!!!!  GALIMYBE GRAZINTI KREDITA NUSTATYMUI !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! \\                        

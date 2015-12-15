@@ -135,9 +135,30 @@ public class Kreditas {
     public boolean patikrink_ivestus_duomenys_busto() {
         return vaikuSkaiciusSeimoje > 0 && vaikuSkaiciusSeimoje < 10 && seimosPajamosAtskaiciusMokescius > 0 && seimosPajamosAtskaiciusMokescius < 30000 && seimosFinansiniaiIsipareigojimai > 0 && seimosFinansiniaiIsipareigojimai < 15000 && laikotarpis < 40;
     }
+
     /**
      *
      * END OF CONSOLIDATE CONDITIONAL EXPRESSION
      *
+     */
+    
+    /**
+     * DECOMPOSE CONDITIONAL
+     */
+    public boolean tikrink_sutartiesSudarymoMokestisAtsakymas(double num) {
+
+        return sutartiesSudarymoMokestisAtsakymas < num;
+    }
+
+    public boolean tikrink_laikotarpi(int num) {
+        return laikotarpis > num;
+    }
+
+    public boolean tikrink_ar_nesuteikiama_paskola() {
+        return kreditoMenesineImokaApskaiciavimas >= realiosMenesinesPajamos / 100 * 40;
+    }
+
+    /**
+     * END OF DECOMPOSE CONDITIONAL
      */
 }
