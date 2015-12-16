@@ -2,7 +2,6 @@ package kreditas;
 
 public class bkreditas extends Kreditas { // Pull up field
 
-// private double a, k, l, is; // Pull up field
     private double pa;
 
     public bkreditas(double a, double k, double l, double is, double pa) {
@@ -18,16 +17,15 @@ public class bkreditas extends Kreditas { // Pull up field
         this.pa = 0;
     }
 
-    
     public void kreditas() {
 
         double Vimk, Ksum; //papildomi kintamieji
 
-        if (is < 5000) {
+        if (this.getIs() < 5000) {
             if (pa <= 50) {
-                Ksum = kreditosuma(k, l);
-                Vimk = imokosAp(Ksum, l);
-                if (((Vimk / a) * 100) <= 40) {
+                Ksum = this.kreditosuma(this.getK(), this.getL());
+                Vimk = imokosAp(Ksum, this.getL());
+                if (((Vimk / this.getA()) * 100) <= 40) {
                     System.out.println("Kredit� suteikti galima!" + " "
                             + "Viso gra�inti reik�s: " + Ksum + " "
                             + "Men�sin� �moka bus: " + Vimk);
@@ -43,12 +41,8 @@ public class bkreditas extends Kreditas { // Pull up field
 
     }
 
-    private double kreditosuma(double k, double l) {
-        double p = 0.04; //metine palukanu norma 4%
-        return k + (k * l * p);
-    }
-
-    private double imokosAp(double K, double l) {
-        return k / (l * 12); // imokos apskaiciavimas
-    }
+    /**
+     * Pull up method pasalinamia metodus pasikartojancius metodus ir perkeliame
+     * i super kalse
+     */
 }

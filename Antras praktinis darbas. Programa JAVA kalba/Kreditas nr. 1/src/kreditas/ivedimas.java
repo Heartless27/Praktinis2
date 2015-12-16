@@ -6,8 +6,8 @@ public class ivedimas {
 
     public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
-        vkreditas VartClass = new vkreditas();
-        bkreditas BustClass = new bkreditas();
+        vkreditas VartClass;
+        bkreditas BustClass;
         double Pajamos, PajamosB, skolos, Ksuma; // ivedimo
         int variantas, Svaiku, pam, laik;// ivedimo
 
@@ -31,7 +31,7 @@ public class ivedimas {
                 System.out.println("�veskite kredito suma nuo 300 Eu iki 26000 Eu: ");
                 Ksuma = scan.nextDouble();
                 PajamosB = Pajamos - skolos - (Svaiku * sumavaik);
-                VartClass.setDuom(PajamosB, Ksuma, laik, laik);
+                VartClass = new vkreditas(PajamosB, Ksuma, laik, laik);
                 VartClass.kreditas();
             } else {
                 System.out.println("�veskite vaik� skaiciu nuo 0 iki 10 :");
@@ -47,7 +47,7 @@ public class ivedimas {
                 System.out.println("�veskite kredito sum�: ");
                 Ksuma = scan.nextDouble();
                 PajamosB = Pajamos - skolos - (Svaiku * sumavaik);
-                BustClass.setDuom(PajamosB, Ksuma, laik, skolos, pam);
+                BustClass = new bkreditas(PajamosB, Ksuma, laik, skolos, pam);
                 BustClass.kreditas();
             }
         } else {

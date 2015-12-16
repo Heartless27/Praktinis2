@@ -52,5 +52,19 @@ public class Kreditas {
         this.is = is;
     }
 
-    
+    /**
+     * Pull up method
+     */
+    public double kreditosuma(double k, double l) {
+        double p = 0.04; //metine palukanu norma 4%
+        return k + (k * l * p);
+    }
+
+    public double imokosAp(double K, double l) {
+        return k / (l * 12); // imokos apskaiciavimas
+    }
+
+    /**
+     * END OF Pull up method
+     */
 }
