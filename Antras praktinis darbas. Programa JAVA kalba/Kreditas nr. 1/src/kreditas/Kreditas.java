@@ -77,5 +77,5 @@ public class Kreditas {
     }
     /**
      * END OF DECOMPOSE CONDITIONAL
-     */
+     */    
 }
