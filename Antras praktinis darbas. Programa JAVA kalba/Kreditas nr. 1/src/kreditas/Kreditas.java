@@ -67,4 +67,15 @@ public class Kreditas {
     /**
      * END OF Pull up method
      */
+    
+    
+    /**
+     * DECOMPOSE CONDITIONAL
+     */
+    public boolean arSuteikiamasKreditas(double num) {
+        return ((num / this.getA()) * 100) <= 40;
+    }
+    /**
+     * END OF DECOMPOSE CONDITIONAL
+     */
 }

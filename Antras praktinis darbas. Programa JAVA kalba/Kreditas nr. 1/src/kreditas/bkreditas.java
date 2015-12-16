@@ -25,7 +25,7 @@ public class bkreditas extends Kreditas { // Pull up field
             if (pa <= 50) {
                 Ksum = this.kreditosuma(this.getK(), this.getL());
                 Vimk = imokosAp(Ksum, this.getL());
-                if (((Vimk / this.getA()) * 100) <= 40) {
+                if (this.arSuteikiamasKreditas(Vimk)) { // DECOMPOSE CONDITIONAL
                     System.out.println("Kredit� suteikti galima!" + " "
                             + "Viso gra�inti reik�s: " + Ksum + " "
                             + "Men�sin� �moka bus: " + Vimk);
