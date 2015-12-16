@@ -1,17 +1,24 @@
 package kreditas;
 
-public class bkreditas {
+public class bkreditas extends Kreditas { // Pull up field
 
-    private double a, k, l, is, pa;
+// private double a, k, l, is; // Pull up field
+    private double pa;
 
-    public void setDuom(double a, double k, double l, double is, double pa) {
-        this.a = a;
-        this.k = k;
-        this.l = l;
-        this.is = is;
+    public bkreditas(double a, double k, double l, double is, double pa) {
+        super(a, k, l, is);
         this.pa = pa;
     }
 
+    /*
+     * Default Constructor
+     */
+    public bkreditas() {
+        super(0, 0, 0, 0);
+        this.pa = 0;
+    }
+
+    
     public void kreditas() {
 
         double Vimk, Ksum; //papildomi kintamieji

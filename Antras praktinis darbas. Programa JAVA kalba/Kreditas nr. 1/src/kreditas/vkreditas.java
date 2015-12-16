@@ -1,15 +1,23 @@
 package kreditas;
 
-public class vkreditas {
+public class vkreditas extends Kreditas {   //Pull up field
 
-    private double a, k, l, is;
-
-    public void setDuom(double a, double k, double l, double is) {
-        this.a = a;
-        this.k = k;
-        this.l = l;
-        this.is = is;
+    
+     //  private double a, k, l, is; // Pull up field
+    
+    public vkreditas(double a, double k, double l, double is) {
+        super(a, k, l, is);
     }
+
+    /*
+     * Default Constructor
+     */
+    public vkreditas() {
+        super(0, 0, 0, 0);
+    }
+   
+
+   
 
     public void kreditas() {
 
