@@ -18,7 +18,7 @@ public class vkreditas extends Kreditas {   //Pull up field
         double Vimk, Ksum; //papildomi kintamieji, taip pat palukanu norma
 
         if (this.getIs() < 15000) {
-            if (this.getK() >= 300 && this.getK() <= 260000) {
+            if (arGalimaSuteiktiKredita()) { // DECOMPOSE CONDITIONAL
                 if (this.getL() <= 5) {
                     Ksum = kreditosuma(this.getK(), this.getL());
                     Vimk = imokosAp(Ksum, this.getL());
@@ -44,5 +44,17 @@ public class vkreditas extends Kreditas {   //Pull up field
     /**
      * Pull up method pasalinamia metodus pasikartojancius metodus ir perkeliame
      * i super kalse
+     */
+    
+    
+    
+    /**
+     * DECOMPOSE CONDITIONAL
+     */
+    private boolean arGalimaSuteiktiKredita() {
+        return this.getK() >= 300 && this.getK() <= 260000;
+    }
+    /**
+     * END OF DECOMPOSE CONDITIONAL
      */
 }
